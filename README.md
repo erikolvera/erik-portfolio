@@ -1,6 +1,6 @@
 # Erik Olvera — engineering portfolio
 
-**Live: [erik-portfolio-six.vercel.app](https://erik-portfolio-six.vercel.app)**
+**Live: [erik-olvera.vercel.app](https://erik-olvera.vercel.app)**
 
 A source-backed portfolio focused on Python, backend systems, financial software, and applied AI.
 
