@@ -3,7 +3,7 @@ export const site = {
   title: 'Erik Olvera — Software Engineer · Python & Backend',
   description:
     'Software engineer building Python APIs, financial simulation engines, and applied AI systems. Computer Science graduate from Texas State University.',
-  url: 'https://erik-portfolio.vercel.app',
+  url: 'https://erik-portfolio-six.vercel.app',
   email: 'erikolvera44@gmail.com',
   github: 'https://github.com/erikolvera',
   linkedin: 'https://www.linkedin.com/in/erikolvera',
