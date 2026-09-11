@@ -1,15 +1,21 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Archivo, Newsreader, Martian_Mono } from 'next/font/google';
 import { Header } from '@/components/portfolio/header';
 import { site } from '@/lib/site';
 import './globals.css';
-const sans = Geist({
-  variable: '--font-geist-sans',
+const display = Archivo({
+  variable: '--font-display',
+  subsets: ['latin'],
+  axes: ['wdth'],
+  display: 'swap',
+});
+const body = Newsreader({
+  variable: '--font-body',
   subsets: ['latin'],
   display: 'swap',
 });
-const mono = Geist_Mono({
-  variable: '--font-geist-mono',
+const mono = Martian_Mono({
+  variable: '--font-mono',
   subsets: ['latin'],
   display: 'swap',
 });
@@ -39,7 +45,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${sans.variable} ${mono.variable}`}>
+      <body className={`${display.variable} ${body.variable} ${mono.variable}`}>
         <a className="skip-link" href="#main">
           Skip to content
         </a>

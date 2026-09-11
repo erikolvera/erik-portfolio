@@ -1,101 +1,130 @@
-import { ArrowDown, ArrowUpRight, Code, ArrowRight } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { site } from '@/lib/site';
 import { projects } from '@/lib/projects';
 import { ProjectCard } from '@/components/portfolio/project-card';
+import { Formation } from '@/components/portfolio/formation';
 import { Footer } from '@/components/portfolio/footer';
 import { CopyEmail } from '@/components/portfolio/copy-email';
+
 export default function Home() {
   return (
     <>
       <main id="main">
         <section className="shell hero">
-          <div className="hero-copy">
-            <p className="eyebrow">
-              <span className="status-dot" /> SOFTWARE ENGINEER · PYTHON &
-              BACKEND
+          <div className="sheet">
+            <div className="sheet-head">
+              <span className="label label-strike">Team sheet</span>
+              <span className="sheet-status">
+                <span className="live-dot" aria-hidden="true" />
+                Available
+              </span>
+            </div>
+            <div className="sheet-body">
+              <p className="squad-no" aria-hidden="true">
+                26
+              </p>
+              <div>
+                <h1 className="player-name">
+                  Erik <span>Olvera</span>
+                </h1>
+                <p className="player-pos">
+                  Backend · Python · Financial systems
+                </p>
+              </div>
+            </div>
+            <dl className="sheet-rows">
+              <div>
+                <dt>Club</dt>
+                <dd>Texas State University</dd>
+              </div>
+              <div>
+                <dt>Position</dt>
+                <dd>Software engineer, backend</dd>
+              </div>
+              <div>
+                <dt>Season</dt>
+                <dd>
+                  B.S. Computer Science ’26 · Cum Laude · Minor in Data
+                  Analytics
+                </dd>
+              </div>
+              <div>
+                <dt>Speciality</dt>
+                <dd>Python APIs · simulation engines · applied AI</dd>
+              </div>
+            </dl>
+            <p className="sheet-intro">
+              I build Python APIs, financial simulation engines, and AI
+              applications—with a close eye on the logic that makes them work.
             </p>
-            <h1>
-              Built from the
-              <br />
-              <span>backend up.</span>
-            </h1>
-            <p className="hero-intro">
-              I’m Erik Olvera. I build Python APIs, financial simulation
-              engines, and AI applications—with a close eye on the logic that
-              makes them work.
-            </p>
-            <div className="hero-actions">
-              <a href="#work" className="button button-primary">
-                Explore my work <ArrowDown size={17} />
+            <div className="sheet-actions">
+              <a href="#work" className="button">
+                Explore my work <ArrowDown size={15} aria-hidden="true" />
               </a>
-              <a href={site.github} className="text-link">
-                <Code size={17} /> GitHub <ArrowUpRight size={14} />
+              <a href={site.github} className="link">
+                GitHub <ArrowUpRight size={13} aria-hidden="true" />
               </a>
-              <a href={site.resume} className="text-link">
-                Résumé <ArrowUpRight size={14} />
+              <a href={site.resume} className="link">
+                Résumé <ArrowUpRight size={13} aria-hidden="true" />
               </a>
             </div>
           </div>
-          <aside className="hero-note">
-            <p className="eyebrow">A LITTLE CONTEXT</p>
-            <p className="note-title">
-              CS foundations.
-              <br />
-              Practical applications.
-            </p>
-            <p>
-              Texas State University
-              <br />
-              B.S. Computer Science, 2026
-              <br />
-              Minor in Data Analytics
-            </p>
-            <div className="availability">
-              <span className="status-dot" /> Open to engineering roles
+          <figure className="player-card">
+            <div className="player-photo">
+              <Image
+                src="/erik-olvera.jpg"
+                alt="Erik Olvera at Texas State University wearing his First Generation graduate stole"
+                fill
+                unoptimized
+                sizes="(max-width: 1000px) 380px, 360px"
+              />
             </div>
-            <a className="text-link" href="#contact">
-              Let’s talk <ArrowUpRight size={15} />
-            </a>
-          </aside>
+            <figcaption>
+              <strong>Erik Olvera</strong>
+              First-generation graduate. Texas State University, class of 2026.
+            </figcaption>
+          </figure>
         </section>
-        <div className="shell focus-strip">
-          <span>PYTHON FIRST</span>
+
+        <div className="shell ticker">
+          <span className="ticker-lead">Python first</span>
           <span>Backend systems</span>
           <span>Financial software</span>
-          <span>Applied AI & data</span>
+          <span>Applied AI &amp; data</span>
         </div>
+
         <section id="work" className="shell work-section">
-          <div className="section-heading">
+          <div className="section-head">
             <div>
-              <p className="eyebrow">01 / SELECTED WORK</p>
-              <h2>The engineering behind it.</h2>
+              <span className="label label-strike">Selected work</span>
+              <h2>The engineering behind it</h2>
             </div>
-            <p>
-              Practical problems.
-              <br />
-              Deliberate technical decisions.
+            <p className="section-aside">
+              Practical problems. Deliberate technical decisions.
             </p>
           </div>
-          <div className="featured-list">
+          <div className="fixture-list">
             {projects.map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
-          <div className="supporting-heading">
-            <h3>From data to decisions.</h3>
+
+          <div className="support-head">
+            <span className="label label-strike">Also in the file</span>
+            <h3>From data to decisions</h3>
             <p>Two more projects that show how I think.</p>
           </div>
-          <div className="supporting-grid">
-            <article className="supporting-card">
-              <p className="eyebrow">04 / MACHINE LEARNING FOUNDATIONS</p>
+          <div className="support-grid">
+            <article className="support-card">
+              <span className="label">Machine learning foundations</span>
               <h3>Image classification</h3>
-              <p>
+              <p className="support-body">
                 A Naive Bayes classifier implemented in Python, with
                 log-probability scoring, smoothing, and feature extraction for
                 handwritten digits and faces.
               </p>
-              <div className="metric-pair">
+              <div className="stat-pair">
                 <div>
                   <strong>
                     82.1<span>%</span>
@@ -109,7 +138,7 @@ export default function Home() {
                   <span>Faces · 301 validation images</span>
                 </div>
               </div>
-              <p className="metric-note">
+              <p className="stat-note">
                 Reproduced on September 7, 2026. Validation accuracy; not
                 held-out test accuracy.
               </p>
@@ -119,26 +148,26 @@ export default function Home() {
                 <span>Feature engineering</span>
               </div>
               <a
-                className="text-link"
+                className="link"
                 href="https://github.com/erikolvera/image_classification"
               >
                 Explore the implementation{' '}
-                <ArrowUpRight size={15} aria-hidden="true" />
+                <ArrowUpRight size={13} aria-hidden="true" />
               </a>
             </article>
-            <article className="supporting-card">
-              <p className="eyebrow">05 / DATA ANALYSIS</p>
+            <article className="support-card">
+              <span className="label">Data analysis</span>
               <h3>Housing affordability</h3>
-              <p>
+              <p className="support-body">
                 A Python and Streamlit exploration combining Redfin, Zillow, and
                 City of Austin data to compare home values, income requirements,
                 and affordable-housing locations.
               </p>
-              <div className="data-story">
+              <div className="flow-line">
                 <span>Regional data</span>
-                <ArrowRight size={16} aria-hidden="true" />
+                <ArrowRight size={15} aria-hidden="true" />
                 <span>Analysis</span>
-                <ArrowRight size={16} aria-hidden="true" />
+                <ArrowRight size={15} aria-hidden="true" />
                 <span>Explore</span>
               </div>
               <p className="support-detail">
@@ -151,33 +180,24 @@ export default function Home() {
                 <span>Streamlit</span>
               </div>
               <a
-                className="text-link"
+                className="link"
                 href="https://github.com/erikolvera/austin-sanmarcos-housing-affordability"
               >
                 Explore the analysis{' '}
-                <ArrowUpRight size={15} aria-hidden="true" />
+                <ArrowUpRight size={13} aria-hidden="true" />
               </a>
             </article>
           </div>
         </section>
+
         <section id="about" className="about-section">
           <div className="shell about-grid">
-            <div className="about-intro">
-              <p className="eyebrow">02 / ABOUT</p>
+            <div>
+              <span className="label label-strike">About</span>
               <h2>
-                Curious about the product.
-                <br />
+                Curious about the product.{' '}
                 <span>Particular about the details.</span>
               </h2>
-              <figure className="about-portrait">
-                <Image
-                  src="/erik-olvera.jpg"
-                  alt="Erik Olvera at Texas State University wearing his First Generation graduate stole"
-                  fill
-                  unoptimized
-                  sizes="(max-width: 900px) calc(100vw - 48px), 545px"
-                />
-              </figure>
             </div>
             <div className="about-copy">
               <p>
@@ -197,108 +217,71 @@ export default function Home() {
                 role, especially on a team working with financial software,
                 data, or practical AI applications.
               </p>
-              <a href={site.resume} className="text-link">
-                View my résumé <ArrowUpRight size={16} aria-hidden="true" />
+              <a href={site.resume} className="link">
+                View my résumé <ArrowUpRight size={13} aria-hidden="true" />
               </a>
             </div>
           </div>
-          <div className="shell background-grid">
-            <div className="background-item">
-              <p className="eyebrow">EDUCATION</p>
+          <div className="shell record-grid">
+            <div className="record-item">
+              <span className="label">Education</span>
               <h3>Texas State University</h3>
-              <p>B.S. Computer Science · Minor in Data Analytics</p>
-              <span>Cum Laude · May 2026</span>
+              <p className="record-body">
+                B.S. Computer Science · Minor in Data Analytics
+              </p>
+              <span className="record-meta">Cum Laude · May 2026</span>
             </div>
-            <div className="background-item">
-              <p className="eyebrow">EXPERIENCE BEYOND THE CODE</p>
-              <h3>Ownership under pressure.</h3>
-              <p>
+            <div className="record-item">
+              <span className="label">Experience beyond the code</span>
+              <h3>Ownership under pressure</h3>
+              <p className="record-body">
                 As an interim team lead and fulfillment pace setter at Target,
                 I’ve coordinated teams, communicated across functions, and taken
                 responsibility for day-to-day execution.
               </p>
-              <span>Target · August 2022–present</span>
+              <span className="record-meta">Target · August 2022–present</span>
             </div>
           </div>
         </section>
-        <section className="shell skills-section">
-          <div className="section-heading">
+
+        <section className="shell formation-section">
+          <div className="section-head">
             <div>
-              <p className="eyebrow">03 / TOOLKIT</p>
-              <h2>Tools I’ve put to work.</h2>
+              <span className="label label-strike">Toolkit</span>
+              <h2>Tools I’ve put to work</h2>
             </div>
-            <p>Grounded in the projects above.</p>
+            <p className="section-aside">Grounded in the projects above.</p>
           </div>
-          <div className="skills-grid">
-            {[
-              [
-                'Languages & foundations',
-                'Python · TypeScript · JavaScript',
-                'Data structures, algorithms, and numerical modeling.',
-              ],
-              [
-                'Backend & contracts',
-                'FastAPI · Pydantic · REST APIs',
-                'Input validation, typed responses, and clear service boundaries.',
-              ],
-              [
-                'Data & AI',
-                'Pandas · Plotly · CrewAI · Gemini',
-                'Data analysis, classification, and structured AI workflows.',
-              ],
-              [
-                'Databases & state',
-                'PostgreSQL · Supabase · Redis',
-                'User state, authentication integrations, and application caching.',
-              ],
-              [
-                'Web applications',
-                'React · Next.js · HTML · CSS',
-                'Accessible interfaces connected to the systems behind them.',
-              ],
-              [
-                'Testing & delivery',
-                'pytest · Hypothesis · GitHub Actions',
-                'Property-based tests, Git workflows, Docker, and deployments.',
-              ],
-            ].map(([title, tools, description]) => (
-              <div className="skill-group" key={title}>
-                <h3>{title}</h3>
-                <p>{tools}</p>
-                <span>{description}</span>
-              </div>
-            ))}
-          </div>
+          <Formation />
         </section>
+
         <section id="contact" className="contact-section">
           <div className="shell contact-inner">
             <div>
-              <p className="eyebrow">
-                <span className="status-dot" /> OPEN TO ENGINEERING
-                OPPORTUNITIES
+              <span className="label label-strike">
+                <span className="live-dot" aria-hidden="true" />
+                Open to engineering opportunities
+              </span>
+              <h2>Let’s build something useful</h2>
+              <p className="contact-note">
+                Software engineering · Backend · Python
               </p>
-              <h2>
-                Let’s build
-                <br />
-                something useful.
-              </h2>
-              <p>Software engineering · Backend · Python</p>
             </div>
-            <div className="contact-details">
+            <div>
               <a className="email-link" href={`mailto:${site.email}`}>
                 {site.email}
-                <ArrowUpRight size={23} aria-hidden="true" />
+                <ArrowUpRight size={20} aria-hidden="true" />
               </a>
               <CopyEmail />
               <div className="contact-links">
-                <a className="text-link" href={site.linkedin}>
-                  LinkedIn <ArrowUpRight size={15} aria-hidden="true" />
+                <a className="link" href={site.linkedin}>
+                  LinkedIn <ArrowUpRight size={13} aria-hidden="true" />
                 </a>
-                <a className="text-link" href={site.github}>
-                  GitHub <ArrowUpRight size={15} aria-hidden="true" />
+                <a className="link" href={site.github}>
+                  GitHub <ArrowUpRight size={13} aria-hidden="true" />
                 </a>
-                <a className="text-link" href={site.resume} download>
-                  Download résumé <ArrowDown size={15} aria-hidden="true" />
+                <a className="link" href={site.resume} download>
+                  Download résumé <ArrowDown size={13} aria-hidden="true" />
                 </a>
               </div>
             </div>

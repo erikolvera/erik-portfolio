@@ -47,24 +47,21 @@ export default async function CaseStudy({
     <>
       <main id="main">
         <section className="shell case-hero">
-          <a className="text-link back-link" href="/#work">
+          <a className="link back-link" href="/#work">
             <ArrowLeft size={16} aria-hidden="true" /> All selected work
           </a>
-          <p className="eyebrow">
-            CASE STUDY {p.number} / {p.category}
+          <p className="label label-strike">
+            Case study {p.number} · {p.category}
           </p>
-          <h1>
-            {p.name}
-            <span className="accent">.</span>
-          </h1>
+          <h1>{p.name}</h1>
           <p className="case-deck">{p.headline}</p>
           <p className="case-summary">{p.summary}</p>
           <div className="case-top-links">
-            <a className="button button-primary" href={p.repository}>
+            <a className="button" href={p.repository}>
               View source <ArrowUpRight size={16} aria-hidden="true" />
             </a>
             {p.demo && (
-              <a className="text-link" href={p.demo}>
+              <a className="link" href={p.demo}>
                 Live application <ArrowUpRight size={16} aria-hidden="true" />
               </a>
             )}
@@ -72,15 +69,15 @@ export default async function CaseStudy({
           </div>
           <dl className="case-facts">
             <div>
-              <dt>CONTRIBUTION</dt>
+              <dt>Contribution</dt>
               <dd>{p.role}</dd>
             </div>
             <div>
-              <dt>ENGINEERING FOCUS</dt>
+              <dt>Engineering focus</dt>
               <dd>{p.focus}</dd>
             </div>
             <div>
-              <dt>TECHNOLOGY</dt>
+              <dt>Technology</dt>
               <dd>{p.stack.join(' · ')}</dd>
             </div>
           </dl>
@@ -89,7 +86,7 @@ export default async function CaseStudy({
         <div className="shell case-diagram">
           <Architecture project={p.slug} />
           <div className="diagram-note">
-            <p className="eyebrow">ARCHITECTURE AT A GLANCE</p>
+            <p className="label">ARCHITECTURE AT A GLANCE</p>
             <h2>
               {p.slug === 'debtpilot'
                 ? 'Correctness lives in the core.'
@@ -97,7 +94,7 @@ export default async function CaseStudy({
                   ? 'Keep the stages explicit.'
                   : 'Make the boundary deliberate.'}
             </h2>
-            <p>
+            <p className="diagram-body">
               {p.slug === 'debtpilot'
                 ? 'Financial inputs are validated before cash-flow analysis and simulation. The API wraps the engine; the engine stays independent.'
                 : p.slug === 'golazo'
@@ -108,10 +105,10 @@ export default async function CaseStudy({
         </div>
         <div className="shell case-body">
           <aside className="case-nav">
-            <p className="eyebrow">IN THIS CASE STUDY</p>
+            <p className="label">IN THIS CASE STUDY</p>
             <nav aria-label="Case study sections">
               <a href="#product-gallery">
-                <span>VIEW</span>
+                <span>→</span>
                 Product screens
               </a>
               {p.sections.map((s, i) => (
@@ -128,22 +125,24 @@ export default async function CaseStudy({
           <div className="case-prose">
             {p.sections.map((s, i) => (
               <section id={`decision-${i + 1}`} key={s.title}>
-                <p className="eyebrow">DECISION 0{i + 1}</p>
+                <p className="label">DECISION 0{i + 1}</p>
                 <h2>{s.title}</h2>
                 {s.paragraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                  <p className="case-para" key={paragraph}>
+                    {paragraph}
+                  </p>
                 ))}
               </section>
             ))}
             <section className="outcome-section">
-              <p className="eyebrow">OUTCOME</p>
+              <p className="label">OUTCOME</p>
               <h2>What the work demonstrates.</h2>
-              <p>{p.outcome}</p>
+              <p className="case-para">{p.outcome}</p>
             </section>
             <section id="source-notes" className="source-notes">
-              <p className="eyebrow">GO ONE LEVEL DEEPER</p>
+              <p className="label">GO ONE LEVEL DEEPER</p>
               <h2>Implementation references.</h2>
-              <p>
+              <p className="case-para">
                 The details behind this case study, linked to the code reviewed
                 for the portfolio.
               </p>
@@ -163,10 +162,10 @@ export default async function CaseStudy({
         </div>
         <div className="shell next-project">
           <div>
-            <p className="eyebrow">NEXT CASE STUDY</p>
+            <p className="label">NEXT CASE STUDY</p>
             <h2>{next.name}</h2>
           </div>
-          <a className="text-link" href={`/work/${next.slug}/`}>
+          <a className="link" href={`/work/${next.slug}/`}>
             Explore the project <ArrowRight size={18} aria-hidden="true" />
           </a>
         </div>

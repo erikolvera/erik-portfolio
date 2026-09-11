@@ -3,7 +3,7 @@ export function Architecture({ project }: { project: ProjectSlug }) {
   if (project === 'debtpilot')
     return (
       <figure
-        className="engineering-plate debt-plate"
+        className="plate debt-plate"
         aria-label="DebtPilot data flow: validated financial inputs pass through one Decimal simulator configured for Snowball, Avalanche, and minimum-only payoff strategies."
       >
         <p className="plate-label">INSIDE THE ENGINE</p>
@@ -36,7 +36,7 @@ export function Architecture({ project }: { project: ProjectSlug }) {
   if (project === 'golazo')
     return (
       <figure
-        className="engineering-plate ai-plate"
+        className="plate ai-plate"
         aria-label="GOLAZO data flow: FastAPI checks memory and Redis caches, then serializes generation through Scout, Analyst, and Journalist agents. Pydantic validates the final briefing."
       >
         <p className="plate-label">THE AGENT RELAY</p>
@@ -80,7 +80,7 @@ export function Architecture({ project }: { project: ProjectSlug }) {
     );
   return (
     <figure
-      className="engineering-plate mood-plate"
+      className="plate mood-plate"
       aria-label="AniMood's MoodBot boundary: an authenticated user message is validated by a server route before Gemini produces a response for the conversation."
     >
       <p className="plate-label">MY PART OF THE PIPELINE</p>
