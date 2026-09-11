@@ -28,7 +28,12 @@ The production build is a static export in `dist/client`. The build also generat
 
 ## Deployment
 
-The repository includes `.openai/hosting.json` for OpenAI Sites. Any static host can publish `dist/client` after `npm run build`.
+Deployed on Vercel from `main`; `vercel.json` sets the build command and the
+`dist/client` output directory. Any static host can publish `dist/client` after
+`npm run build`.
+
+`site.url` in `lib/site.ts` is baked into canonical URLs, Open Graph tags, the sitemap,
+and robots.txt at build time — it must match the live domain.
 
 ## Main files
 
