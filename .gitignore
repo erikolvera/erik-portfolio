@@ -41,3 +41,6 @@ next-env.d.ts
 # Local source-audit records are retained on this computer, not published.
 /docs/
 *.tsbuildinfo
+
+# local agent/editor tooling
+.claude/
