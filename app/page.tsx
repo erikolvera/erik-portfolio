@@ -1,4 +1,5 @@
 import { ArrowDown, ArrowUpRight, Code, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import { site } from '@/lib/site';
 import { projects } from '@/lib/projects';
 import { ProjectCard } from '@/components/portfolio/project-card';
@@ -161,13 +162,22 @@ export default function Home() {
         </section>
         <section id="about" className="about-section">
           <div className="shell about-grid">
-            <div>
+            <div className="about-intro">
               <p className="eyebrow">02 / ABOUT</p>
               <h2>
                 Curious about the product.
                 <br />
                 <span>Particular about the details.</span>
               </h2>
+              <figure className="about-portrait">
+                <Image
+                  src="/erik-olvera.jpg"
+                  alt="Erik Olvera at Texas State University wearing his First Generation graduate stole"
+                  fill
+                  unoptimized
+                  sizes="(max-width: 900px) calc(100vw - 48px), 545px"
+                />
+              </figure>
             </div>
             <div className="about-copy">
               <p>

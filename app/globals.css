@@ -890,6 +890,19 @@ figure {
 .about-grid h2 span {
   color: #65735d;
 }
+.about-portrait {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  margin-top: 38px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #dfe5d8;
+}
+.about-portrait img {
+  object-fit: cover;
+  object-position: center 48%;
+}
 .about-copy > p {
   font-size: 16px;
   color: #4f5949;
