@@ -36,4 +36,4 @@ The repository includes `.openai/hosting.json` for OpenAI Sites. Any static host
 - `app/work/[slug]/page.tsx` — statically generated case-study pages
 - `lib/projects.ts` — source-backed case-study content and evidence links
 - `components/portfolio/` — navigation, diagrams, cards, and contact components
-- `public/erik-olvera-resume.pdf` — one-page public résumé without phone or home address
+- `public/erik-olvera-resume.pdf` — one-page public résumé

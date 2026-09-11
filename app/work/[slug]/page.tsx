@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
 import { projects } from '@/lib/projects';
 import { Architecture } from '@/components/portfolio/architecture';
 import { Footer } from '@/components/portfolio/footer';
+import { ProjectGallery } from '@/components/portfolio/project-showcase';
 export function generateStaticParams() {
   return projects.map(({ slug }) => ({ slug }));
 }
@@ -84,6 +85,7 @@ export default async function CaseStudy({
             </div>
           </dl>
         </section>
+        <ProjectGallery project={p} />
         <div className="shell case-diagram">
           <Architecture project={p.slug} />
           <div className="diagram-note">
@@ -108,6 +110,10 @@ export default async function CaseStudy({
           <aside className="case-nav">
             <p className="eyebrow">IN THIS CASE STUDY</p>
             <nav aria-label="Case study sections">
+              <a href="#product-gallery">
+                <span>VIEW</span>
+                Product screens
+              </a>
               {p.sections.map((s, i) => (
                 <a href={`#decision-${i + 1}`} key={s.title}>
                   <span>0{i + 1}</span>

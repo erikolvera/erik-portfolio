@@ -3,7 +3,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Page not found',
-  description: 'The requested page could not be found on Erik Olvera’s portfolio.',
+  description:
+    'The requested page could not be found on Erik Olvera’s portfolio.',
   robots: { index: false, follow: false },
 };
 

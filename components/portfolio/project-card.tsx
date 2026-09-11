@@ -1,6 +1,6 @@
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import type { Project } from '@/lib/projects';
-import { Architecture } from './architecture';
+import { ProjectPreview } from './project-showcase';
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className={`feature-card project-${project.slug}`}>
@@ -47,7 +47,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <p className="demo-note">Live app requires an account.</p>
         )}
       </div>
-      <Architecture project={project.slug} />
+      <ProjectPreview project={project} />
     </article>
   );
 }

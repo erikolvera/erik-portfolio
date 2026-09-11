@@ -3,6 +3,11 @@ export interface CaseSection {
   title: string;
   paragraphs: string[];
 }
+export interface ProjectScreenshot {
+  src: string;
+  alt: string;
+  caption: string;
+}
 export interface Project {
   slug: ProjectSlug;
   number: string;
@@ -17,6 +22,7 @@ export interface Project {
   role: string;
   focus: string;
   outcome: string;
+  screenshots: ProjectScreenshot[];
   sections: CaseSection[];
   evidence: { label: string; url: string }[];
 }
@@ -38,6 +44,26 @@ export const projects: Project[] = [
     focus: 'Financial modeling · API contracts · Property-based testing',
     outcome:
       'A working payoff planner with explainable calculations and a framework-independent engine. In a local verification on September 7, 2026, all 260 backend tests passed; total coverage was 98.72% with branch measurement enabled.',
+    screenshots: [
+      {
+        src: '/projects/debtpilot/overview.webp',
+        alt: 'DebtPilot overview showing monthly cash flow and an estimated debt-free date.',
+        caption:
+          'The overview turns monthly cash flow into a concrete payoff horizon.',
+      },
+      {
+        src: '/projects/debtpilot/report.webp',
+        alt: 'DebtPilot financial report showing cash flow, payment budget, and monthly check-ins.',
+        caption:
+          'The report keeps the budget, saved plan, and future check-ins connected.',
+      },
+      {
+        src: '/projects/debtpilot/comparison.webp',
+        alt: 'DebtPilot comparison of minimum-only, snowball, and avalanche payoff strategies.',
+        caption:
+          'Snowball and avalanche are compared with payoff dates and estimated interest.',
+      },
+    ],
     sections: [
       {
         title: 'Start with the payment someone can afford.',
@@ -124,6 +150,20 @@ export const projects: Project[] = [
     focus: 'AI orchestration · Concurrency · Failure handling',
     outcome:
       'A complete research-to-briefing application with explicit agent roles, validated output structure, and an operational cache-warming workflow. The repository retains its original name, gaffer-ai.',
+    screenshots: [
+      {
+        src: '/projects/golazo/briefing.webp',
+        alt: 'GOLAZO matchday briefing screen for Mexico versus South Africa.',
+        caption:
+          'A selected fixture becomes a structured, fan-first matchday briefing.',
+      },
+      {
+        src: '/projects/golazo/agents.webp',
+        alt: 'GOLAZO showing Scout, Analyst, and Journalist agents working in sequence.',
+        caption:
+          'Scout, Analyst, and Journalist stages stay visible while the crew runs.',
+      },
+    ],
     sections: [
       {
         title: 'Make a multi-step AI workflow usable as software.',
@@ -212,6 +252,26 @@ export const projects: Project[] = [
     focus: 'Server-side AI integration · Authentication · Team delivery',
     outcome:
       'A team-built anime discovery application with conversational search and saved user state. My commit history records the MoodBot implementation and tests, sequel filtering, server-side Gemini migration, cookie authentication, and server-rendered detail pages.',
+    screenshots: [
+      {
+        src: '/projects/animood/home.webp',
+        alt: 'AniMood home screen with a space-themed anime illustration and explore action.',
+        caption:
+          'The home experience gives the shared product a distinct visual identity.',
+      },
+      {
+        src: '/projects/animood/explore.webp',
+        alt: 'AniMood explore screen with genre filters and a grid of trending anime.',
+        caption:
+          'Explore combines genre shortcuts with a browsable anime catalog.',
+      },
+      {
+        src: '/projects/animood/recommendations.webp',
+        alt: 'AniMood personalized recommendations onboarding based on profile favorites.',
+        caption:
+          'Recommendations build on saved favorites and a lightweight onboarding flow.',
+      },
+    ],
     sections: [
       {
         title: 'Give an open-ended request a useful next step.',
