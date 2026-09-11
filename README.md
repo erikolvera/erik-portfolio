@@ -72,5 +72,4 @@ robots.txt at build time — it must match the live domain above.
 - `components/portfolio/formation.tsx` — the toolkit formation graphic
 - `components/portfolio/` — header, footer, project cards, showcase, architecture diagrams
 - `scripts/check-build.mjs` — the build verification gate
-- `docs/` — provenance notes backing the claims on the site
 - `public/erik-olvera-resume.pdf` — one-page public résumé
