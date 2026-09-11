@@ -22,6 +22,7 @@ export interface Project {
   role: string;
   focus: string;
   outcome: string;
+  result: { label: string; value: string };
   screenshots: ProjectScreenshot[];
   sections: CaseSection[];
   evidence: { label: string; url: string }[];
@@ -44,6 +45,7 @@ export const projects: Project[] = [
     focus: 'Financial modeling · API contracts · Property-based testing',
     outcome:
       'A working payoff planner with explainable calculations and a framework-independent engine. In a local verification on September 7, 2026, all 260 backend tests passed; total coverage was 98.72% with branch measurement enabled.',
+    result: { label: 'Verified', value: '260 tests · 98.72% coverage' },
     screenshots: [
       {
         src: '/projects/debtpilot/overview.webp',
@@ -150,6 +152,7 @@ export const projects: Project[] = [
     focus: 'AI orchestration · Concurrency · Failure handling',
     outcome:
       'A complete research-to-briefing application with explicit agent roles, validated output structure, and an operational cache-warming workflow. The repository retains its original name, gaffer-ai.',
+    result: { label: 'Architecture', value: '3 sequential agents · two-tier cache' },
     screenshots: [
       {
         src: '/projects/golazo/briefing.webp',
@@ -252,6 +255,7 @@ export const projects: Project[] = [
     focus: 'Server-side AI integration · Authentication · Team delivery',
     outcome:
       'A team-built anime discovery application with conversational search and saved user state. My commit history records the MoodBot implementation and tests, sequel filtering, server-side Gemini migration, cookie authentication, and server-rendered detail pages.',
+    result: { label: 'Contribution', value: '4-person team · 4 linked commits' },
     screenshots: [
       {
         src: '/projects/animood/home.webp',

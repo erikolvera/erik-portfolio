@@ -5,9 +5,12 @@ export function Footer() {
     <footer className="site-footer">
       <div className="shell footer-inner">
         <span>© {new Date().getFullYear()} Erik Olvera</span>
-        <p>Thoughtful software, from the inside out.</p>
-        <a className="text-link" href={site.github}>
-          GitHub <ArrowUpRight size={14} aria-hidden="true" />
+        <p>
+          Built by hand in Texas.{' '}
+          <span className="footer-egg">It’s super effective.</span>
+        </p>
+        <a className="link" href={site.github}>
+          GitHub <ArrowUpRight size={13} aria-hidden="true" />
         </a>
       </div>
     </footer>

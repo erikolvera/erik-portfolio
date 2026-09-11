@@ -11,10 +11,12 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <main id="main" className="shell not-found">
-      <p className="eyebrow">404 / PAGE NOT FOUND</p>
+      <p className="label label-strike">404 · Page not found</p>
       <h1>This route ends here.</h1>
-      <p>The project or page you’re looking for isn’t at this address.</p>
-      <a className="button button-primary" href="/">
+      <p className="not-found-body">
+        The project or page you’re looking for isn’t at this address.
+      </p>
+      <a className="button" href="/">
         <ArrowLeft size={16} aria-hidden="true" />
         Back to my portfolio
       </a>

@@ -8,13 +8,13 @@ export default function ErrorPage({
 }) {
   return (
     <main id="main" className="shell not-found">
-      <p className="eyebrow">SOMETHING WENT WRONG</p>
+      <p className="label label-strike">Something went wrong</p>
       <h1>This page didn’t load.</h1>
       <p>Please try again, or return to the portfolio.</p>
-      <Button className="button button-primary" onClick={reset}>
+      <Button className="button" onClick={reset}>
         Try again
       </Button>
-      <a className="text-link" style={{ marginLeft: 24 }} href="/">
+      <a className="link" style={{ marginLeft: 24 }} href="/">
         Back to home
       </a>
     </main>

@@ -6,11 +6,11 @@ export function ProjectPreview({ project }: { project: Project }) {
 
   return (
     <a
-      className="project-preview"
+      className="preview"
       href={`/work/${project.slug}/#product-gallery`}
       aria-label={`See ${project.name} product screens`}
     >
-      <span className="project-preview-frame">
+      <span className="preview-frame">
         {/* oxlint-disable-next-line next/no-img-element -- Vinext dev cannot load next/image's runtime export. */}
         <img
           src={screenshot.src}
@@ -21,12 +21,9 @@ export function ProjectPreview({ project }: { project: Project }) {
           decoding="async"
         />
       </span>
-      <span className="project-preview-caption">
-        <span>
-          <span className="eyebrow">PRODUCT PREVIEW</span>
-          {screenshot.caption}
-        </span>
-        <ArrowRight size={18} aria-hidden="true" />
+      <span className="preview-caption">
+        <span>{screenshot.caption}</span>
+        <ArrowRight size={17} aria-hidden="true" />
       </span>
     </a>
   );
@@ -34,20 +31,20 @@ export function ProjectPreview({ project }: { project: Project }) {
 
 export function ProjectGallery({ project }: { project: Project }) {
   return (
-    <section className="shell project-gallery" id="product-gallery">
-      <div className="project-gallery-heading">
+    <section className="shell gallery" id="product-gallery">
+      <div className="gallery-head">
         <div>
-          <p className="eyebrow">THE WORKING PRODUCT</p>
-          <h2>From system to screen.</h2>
+          <span className="label label-strike">The working product</span>
+          <h2>From system to screen</h2>
         </div>
-        <p>Real screens from the finished application.</p>
+        <p className="section-aside">
+          Real screens from the finished application.
+        </p>
       </div>
-      <div
-        className={`project-gallery-grid gallery-count-${project.screenshots.length}`}
-      >
+      <div className="gallery-grid">
         {project.screenshots.map((screenshot, index) => (
           <figure key={screenshot.src} className={index === 0 ? 'lead' : ''}>
-            <div className="gallery-image-frame">
+            <div className="gallery-frame">
               {/* oxlint-disable-next-line next/no-img-element -- These are pre-optimized static WebP assets. */}
               <img
                 src={screenshot.src}
