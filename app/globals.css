@@ -323,7 +323,6 @@ button:focus-visible {
    Hero — team sheet
    ============================================================ */
 .hero {
-  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.95fr);
   gap: 36px;
@@ -337,8 +336,6 @@ button:focus-visible {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px 24px;
-  border-top: 3px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
   padding: 15px 0;
   font: var(--label);
   text-transform: uppercase;
@@ -352,34 +349,6 @@ button:focus-visible {
   font-variation-settings: 'wdth' 110;
   letter-spacing: -0.02em;
   color: var(--ink);
-}
-/* Pitch markings behind the sheet — the hero and the formation share one diagram. */
-.hero::before {
-  content: '';
-  position: absolute;
-  left: 62%;
-  top: 57%;
-  width: min(720px, 80%);
-  aspect-ratio: 1;
-  transform: translate(-50%, -50%);
-  border: 1px solid var(--strike);
-  border-radius: 50%;
-  opacity: 0.25;
-  pointer-events: none;
-}
-.hero::after {
-  content: '';
-  position: absolute;
-  left: 62%;
-  top: 94px;
-  bottom: 30px;
-  border-left: 1px solid var(--strike);
-  opacity: 0.25;
-  pointer-events: none;
-}
-.hero > * {
-  position: relative;
-  z-index: 1;
 }
 .sheet {
   border: 1px solid var(--rule);
@@ -477,9 +446,6 @@ button:focus-visible {
   background: var(--panel);
   margin-top: 30px;
   padding: 12px 12px 0;
-  box-shadow:
-    8px 8px 0 var(--paper),
-    9px 9px 0 var(--rule);
 }
 .player-photo {
   position: relative;
@@ -1583,14 +1549,6 @@ button:focus-visible {
     font-size: 10px;
     gap: 8px 16px;
   }
-  .hero::before {
-    left: 50%;
-    top: 70%;
-    width: 95%;
-  }
-  .hero::after {
-    left: 50%;
-  }
   .section-head,
   .gallery-head {
     flex-direction: column;
@@ -1761,9 +1719,5 @@ button:focus-visible {
   }
   a {
     text-decoration: underline;
-  }
-  .hero::before,
-  .hero::after {
-    display: none;
   }
 }
