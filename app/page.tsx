@@ -210,7 +210,6 @@ export default function Home() {
         <section id="about" className="about-section">
           <div className="shell about-grid">
             <div>
-              <span className="label label-strike">About</span>
               <h2>About Me</h2>
             </div>
             <div className="about-copy">
@@ -227,6 +226,12 @@ export default function Home() {
                 break, and how to make the result easier to trust.
               </p>
               <p>
+                I also have experience using AI-assisted development tools,
+                including OpenAI Codex and Claude Code, to explore ideas,
+                iterate on implementations, and move from a clear specification
+                to working software.
+              </p>
+              <p>
                 I’m looking for an early-career software or backend engineering
                 role, especially on a team working with financial software,
                 data, or practical AI applications.
@@ -238,29 +243,17 @@ export default function Home() {
                 workouts, and in my free time, I love Pokémon and watching
                 anime.
               </p>
+              <div className="about-education">
+                <span className="label">Education</span>
+                <h3>Texas State University</h3>
+                <p className="education-degree">
+                  B.S. Computer Science · Minor in Data Analytics
+                </p>
+                <span className="education-meta">Cum Laude · May 2026</span>
+              </div>
               <a href={site.resume} className="link">
                 View my résumé <ArrowUpRight size={13} aria-hidden="true" />
               </a>
-            </div>
-          </div>
-          <div className="shell record-grid">
-            <div className="record-item">
-              <span className="label">Education</span>
-              <h3>Texas State University</h3>
-              <p className="record-body">
-                B.S. Computer Science · Minor in Data Analytics
-              </p>
-              <span className="record-meta">Cum Laude · May 2026</span>
-            </div>
-            <div className="record-item">
-              <span className="label">Experience beyond the code</span>
-              <h3>Ownership under pressure</h3>
-              <p className="record-body">
-                As an interim team lead and fulfillment pace setter at Target,
-                I’ve coordinated teams, communicated across functions, and taken
-                responsibility for day-to-day execution.
-              </p>
-              <span className="record-meta">Target · August 2022–present</span>
             </div>
           </div>
         </section>

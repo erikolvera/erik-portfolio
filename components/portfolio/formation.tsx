@@ -38,8 +38,8 @@ const squad = [
     slot: 'pos-keeper',
     line: 'Last line',
     title: 'Testing & delivery',
-    tools: 'pytest · Hypothesis · GitHub Actions',
-    note: 'Property-based tests, Git workflows, Docker, and deployments.',
+    tools: 'pytest · Hypothesis · Codex · Claude Code',
+    note: 'Property-based tests, AI-assisted workflows, GitHub Actions, Docker, and deployments.',
   },
 ];
 
