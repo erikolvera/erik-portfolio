@@ -8,19 +8,24 @@ The homepage is designed for a fast recruiter scan. DebtPilot, GOLAZO, and AniMo
 
 ## Design
 
-The site uses a "Matchday" identity — soccer broadcast information design rather than
-decoration. The ground is a light printed matchday programme: cool paper, white cards,
-cobalt for links and ochre for data. Palette tokens in `app/globals.css` are named for
-print (`--paper`, `--panel`, `--rule`, `--ink`, `--quiet`, `--strike`, `--data`), and all
-text pairings are verified at WCAG AA.
+The site uses a "Matchday Editorial" identity: a light printed soccer programme with
+cool paper, white cards, cobalt for links and ochre for data. An original geometric
+EO / 26 crest anchors the header and favicon; 26 refers to the graduation year.
+The hero pairs a team sheet with a framed portrait and cobalt nameplate. Numbered
+project strips and editorial rules carry the identity into case studies, while the
+toolkit is arranged on a marked soccer pitch with Python at its center.
+Palette tokens in `app/globals.css` are named for print (`--paper`, `--panel`, `--rule`,
+`--ink`, `--quiet`, `--strike`, `--data`). Text colors must meet WCAG AA contrast.
 
 Two rules govern changes:
 
 1. **No invented metrics.** Every claim traces to source or commit history. A project with
    no hard number gets its strongest true fact, never a padded one.
-2. **Boldness in one place.** The formation graphic in the toolkit section is the signature
-   — position encodes centrality, so it carries information rather than ornament.
-   Everything around it stays quiet.
+2. **Soccer identity, engineering clarity.** Use the crest, programme framing, numbering,
+   and pitch geometry consistently, with no club branding. Keep navigation and technical
+   content in plain language. Decorative graphics are hidden from assistive technology;
+   the formation becomes a readable stacked list on mobile. Motion stays restrained
+   and respects reduced-motion preferences.
 
 ## Stack
 

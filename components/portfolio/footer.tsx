@@ -6,8 +6,8 @@ export function Footer() {
       <div className="shell footer-inner">
         <span>© {new Date().getFullYear()} Erik Olvera</span>
         <p>
-          Built by hand in Texas.{' '}
-          <span className="footer-egg">It’s super effective.</span>
+          Built in Texas.{' '}
+          <span className="footer-egg">Inspired by the beautiful game.</span>
         </p>
         <a className="link" href={site.github}>
           GitHub <ArrowUpRight size={13} aria-hidden="true" />

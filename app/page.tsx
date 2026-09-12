@@ -12,6 +12,11 @@ export default function Home() {
     <>
       <main id="main">
         <section className="shell hero">
+          <div className="programme-masthead" aria-hidden="true">
+            <span>Engineering portfolio</span>
+            <span className="programme-title">The matchday edition</span>
+            <span>Class of 2026</span>
+          </div>
           <div className="sheet">
             <div className="sheet-head">
               <span className="label label-strike">Team sheet</span>
@@ -77,12 +82,24 @@ export default function Home() {
                 alt="Erik Olvera at Texas State University wearing his First Generation graduate stole"
                 fill
                 unoptimized
-                sizes="(max-width: 1000px) 380px, 360px"
+                sizes="(max-width: 760px) calc(100vw - 80px), (max-width: 1000px) 380px, 420px"
               />
+              <span className="portrait-number" aria-hidden="true">
+                26
+              </span>
             </div>
             <figcaption>
-              <strong>Erik Olvera</strong>
-              First-generation graduate. Texas State University, class of 2026.
+              <div className="player-nameplate">
+                <span className="label">Software engineer</span>
+                <strong>Erik Olvera</strong>
+                <span className="player-nameplate-mark" aria-hidden="true">
+                  EO / 26
+                </span>
+              </div>
+              <p className="player-caption">
+                First-generation graduate. Texas State University, class of
+                2026.
+              </p>
             </figcaption>
           </figure>
         </section>
@@ -216,6 +233,10 @@ export default function Home() {
                 I’m looking for an early-career software or backend engineering
                 role, especially on a team working with financial software,
                 data, or practical AI applications.
+              </p>
+              <p>
+                Outside of engineering, I’m a soccer fan. This portfolio takes a
+                little inspiration from the beautiful game.
               </p>
               <a href={site.resume} className="link">
                 View my résumé <ArrowUpRight size={13} aria-hidden="true" />

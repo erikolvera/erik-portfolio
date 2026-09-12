@@ -47,8 +47,23 @@ export function Formation() {
   return (
     <>
       <div className="pitch">
-        <span className="pitch-box pitch-box-top" aria-hidden="true" />
-        <span className="pitch-box pitch-box-bottom" aria-hidden="true" />
+        <svg
+          className="pitch-markings"
+          viewBox="0 0 1000 1200"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <rect x="20" y="20" width="960" height="1160" />
+          <path d="M20 600h960M280 20v180h440V20M390 20v70h220V20M280 1180v-180h440v180M390 1180v-70h220v70" />
+          <ellipse cx="500" cy="600" rx="130" ry="120" />
+          <path d="M405 200a110 110 0 0 0 190 0M405 1000a110 110 0 0 1 190 0" />
+          <g className="pitch-spots">
+            <circle cx="500" cy="600" r="4" />
+            <circle cx="500" cy="145" r="4" />
+            <circle cx="500" cy="1055" r="4" />
+          </g>
+        </svg>
         {squad.map((s) => (
           <article className={`pos ${s.slot}`} key={s.title}>
             <span className="pos-line">{s.line}</span>
