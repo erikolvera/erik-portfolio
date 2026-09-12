@@ -1,11 +1,11 @@
-import { ArrowDown, ArrowUpRight, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
-import { site } from '@/lib/site';
-import { projects } from '@/lib/projects';
-import { ProjectCard } from '@/components/portfolio/project-card';
-import { Formation } from '@/components/portfolio/formation';
-import { Footer } from '@/components/portfolio/footer';
-import { CopyEmail } from '@/components/portfolio/copy-email';
+import { ArrowDown, ArrowUpRight, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { site } from "@/lib/site";
+import { projects } from "@/lib/projects";
+import { ProjectCard } from "@/components/portfolio/project-card";
+import { Formation } from "@/components/portfolio/formation";
+import { Footer } from "@/components/portfolio/footer";
+import { CopyEmail } from "@/components/portfolio/copy-email";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
               <span className="label label-strike">Team sheet</span>
               <span className="sheet-status">
                 <span className="live-dot" aria-hidden="true" />
-                Available
+                Free Agent
               </span>
             </div>
             <div className="sheet-body">
@@ -168,7 +168,7 @@ export default function Home() {
                 className="link"
                 href="https://github.com/erikolvera/image_classification"
               >
-                Explore the implementation{' '}
+                Explore the implementation{" "}
                 <ArrowUpRight size={13} aria-hidden="true" />
               </a>
             </article>
@@ -200,7 +200,7 @@ export default function Home() {
                 className="link"
                 href="https://github.com/erikolvera/austin-sanmarcos-housing-affordability"
               >
-                Explore the analysis{' '}
+                Explore the analysis{" "}
                 <ArrowUpRight size={13} aria-hidden="true" />
               </a>
             </article>
@@ -211,10 +211,7 @@ export default function Home() {
           <div className="shell about-grid">
             <div>
               <span className="label label-strike">About</span>
-              <h2>
-                Curious about the product.{' '}
-                <span>Particular about the details.</span>
-              </h2>
+              <h2>About Me</h2>
             </div>
             <div className="about-copy">
               <p>
@@ -235,8 +232,11 @@ export default function Home() {
                 data, or practical AI applications.
               </p>
               <p>
-                Outside of engineering, I’m a soccer fan. This portfolio takes a
-                little inspiration from the beautiful game.
+                Outside of engineering, I’m a soccer fan, with my favorite team
+                being Manchester United. This portfolio takes a little
+                inspiration from it. I also enjoy staying fit through regular
+                workouts, and in my free time, I love Pokémon and watching
+                anime.
               </p>
               <a href={site.resume} className="link">
                 View my résumé <ArrowUpRight size={13} aria-hidden="true" />
