@@ -156,7 +156,10 @@ export default async function CaseStudy({
                   </li>
                 ))}
               </ul>
-              <p className="audit-date">Source reviewed September 7, 2026.</p>
+              <p className="audit-date">
+                Source reviewed September 7, 2026; user-experience references
+                added October 10, 2026.
+              </p>
             </section>
           </div>
         </div>

@@ -34,15 +34,15 @@ export const projects: Project[] = [
     slug: 'debtpilot',
     number: '01',
     name: 'DebtPilot',
-    category: 'FINTECH / BACKEND ENGINEERING',
+    category: 'FINTECH / FULL-STACK ENGINEERING',
     headline: 'A debt payoff plan is only useful if the math holds up.',
     summary:
       'I built a deterministic Python engine that compares payoff strategies, checks affordability, and keeps money precise from the API boundary through the final payment.',
     stack: ['Python', 'FastAPI', 'Pydantic', 'Hypothesis', 'Next.js'],
     repository: 'https://github.com/erikolvera/DebtPilot',
     demo: 'https://debtpilot-lyart.vercel.app',
-    role: 'Personal project · Python engine, API, and web application',
-    focus: 'Financial modeling · API contracts · Property-based testing',
+    role: 'Personal project · Python engine, API, and Next.js application',
+    focus: 'Financial modeling · User data safety · Property-based testing',
     outcome:
       'A working payoff planner with explainable calculations and a framework-independent engine. In a local verification on September 7, 2026, all 260 backend tests passed; total coverage was 98.72% with branch measurement enabled.',
     result: { label: 'Verified', value: '260 tests · 98.72% coverage' },
@@ -96,9 +96,16 @@ export const projects: Project[] = [
         ],
       },
       {
+        title: 'Never make someone guess what happened to their data.',
+        paragraphs: [
+          'People enter real income and debts into this tool, so losing or silently overwriting that data would break trust faster than any calculation error. Guest plans save automatically, older storage formats migrate on load, and if stored data cannot be read, the app keeps it and pauses saving instead of replacing it.',
+          'Optional accounts follow the same rule. When the browser plan and the cloud plan disagree, the app stops and asks which version to keep. Signing out with unsynced changes prompts for a backup first, and the account page keeps guest planning one sentence away.',
+        ],
+      },
+      {
         title: 'A deliberate scope.',
         paragraphs: [
-          'The server processes requests without accounts or a database; the profile is stored in the current browser. That makes the product easy to try, with the tradeoff that it does not sync between devices.',
+          'Planning works without an account: the calculation API is stateless and guest plans live in the browser. Optional Supabase accounts, behind a feature flag, add cross-device saving without making sign-up the price of trying the tool.',
           'The result is a monthly-interest estimate based on user-entered figures. It does not claim to reproduce every lender’s billing rules. Backend CI enforces a 95% coverage gate, and the frontend workflow checks types, lint, tests, and a production build.',
         ],
       },
@@ -126,6 +133,14 @@ export const projects: Project[] = [
           'DebtPilot',
           '05cdcc9bc93249be722b4bcb57d6469227ce502c',
           'backend/app/api/schemas.py',
+        ),
+      },
+      {
+        label: 'Sync conflicts and the choose-a-version flow',
+        url: repo(
+          'DebtPilot',
+          'd19bcf80c8520fdfe2dee0ed6d528a0c8344db36',
+          'frontend/components/LocalDataProvider.tsx',
         ),
       },
       {
@@ -197,6 +212,13 @@ export const projects: Project[] = [
         ],
       },
       {
+        title: 'Make a two-minute wait feel honest.',
+        paragraphs: [
+          'A fresh briefing takes a couple of minutes, which is a long time to stare at a spinner. The page says so up front, shows a running clock, and walks the Scout, Analyst, and Journalist cards through their roles while the crew works.',
+          'The API does not stream agent progress yet, so that relay is paced on the client rather than reporting live state. Cached results are labeled as today’s edition, so a fan knows why a briefing appeared instantly.',
+        ],
+      },
+      {
         title: 'Structure is not the same as factual accuracy.',
         paragraphs: [
           'Schemas make output easier to consume, but they do not verify the underlying sports facts. The current tool can estimate missing statistics and fall back to mock data when research fails.',
@@ -230,6 +252,14 @@ export const projects: Project[] = [
         ),
       },
       {
+        label: 'Waiting-state and cached-edition interface',
+        url: repo(
+          'gaffer-ai',
+          '28115921a5fd2562a21127514cbbbb8946623800',
+          'briefing_engine/static/index.html',
+        ),
+      },
+      {
         label: 'Scheduled cache-warming workflow',
         url: repo(
           'gaffer-ai',
@@ -255,7 +285,7 @@ export const projects: Project[] = [
     focus: 'Server-side AI integration · Authentication · Team delivery',
     outcome:
       'A team-built anime discovery application with conversational search and saved user state. My commit history records the MoodBot implementation and tests, sequel filtering, server-side Gemini migration, cookie authentication, and server-rendered detail pages.',
-    result: { label: 'Contribution', value: '4-person team · 4 linked commits' },
+    result: { label: 'Owned', value: 'MoodBot · search · Next.js migration' },
     screenshots: [
       {
         src: '/projects/animood/home.webp',
@@ -285,6 +315,13 @@ export const projects: Project[] = [
         ],
       },
       {
+        title: 'Recommend something the person can start tonight.',
+        paragraphs: [
+          'A recommendation is only useful if someone can act on it. MoodBot replies with a short, empathetic message and three specific titles instead of a long list to sort through.',
+          'Early results sometimes suggested a second season or a sequel, which is a dead end for someone who has not seen the first. I widened the catalog query and filtered sequel titles out, so every suggestion is a show someone can start from the beginning.',
+        ],
+      },
+      {
         title: 'Move the AI boundary to the server.',
         paragraphs: [
           'The current MoodBot route requires an authenticated user, checks the request body, and limits a message to 500 characters. Gemini is called server-side so its API key is not shipped to the browser.',
@@ -310,6 +347,10 @@ export const projects: Project[] = [
       {
         label: 'My MoodBot implementation',
         url: 'https://github.com/erikolvera/animood/commit/aad352f',
+      },
+      {
+        label: 'Filtering sequels out of recommendations',
+        url: 'https://github.com/erikolvera/animood/commit/e82c0b6',
       },
       {
         label: 'Moving Gemini calls server-side',

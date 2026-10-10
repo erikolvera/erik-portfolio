@@ -2,9 +2,9 @@
 
 **Live: [erik-olvera.vercel.app](https://erik-olvera.vercel.app)**
 
-A source-backed portfolio focused on Python, backend systems, financial software, and applied AI.
+A source-backed portfolio for a product-minded full-stack engineer: careful Python backends, TypeScript interfaces, financial software, and applied AI.
 
-The homepage is designed for a fast recruiter scan. DebtPilot, GOLAZO, and AniMood have deeper case studies, while the image-classification and housing-affordability projects add machine-learning and data-analysis evidence. Technical claims were checked against local source and commit history.
+The homepage is designed for a fast recruiter scan. DebtPilot, GOLAZO, and AniMood have deeper case studies, while the JMS client site, image-classification, and housing-affordability projects add user-experience, machine-learning, and data-analysis evidence. Technical claims were checked against local source and commit history.
 
 ## Design
 

@@ -786,6 +786,22 @@ button:focus-visible {
   margin-top: auto;
   align-self: flex-start;
 }
+.support-card-wide {
+  grid-column: 1 / -1;
+}
+.support-card-wide .fixture-actions {
+  margin-top: auto;
+}
+.support-card-wide .fixture-actions .link {
+  margin-top: 0;
+}
+.support-list {
+  display: grid;
+  gap: 10px;
+  padding-left: 1.1em;
+  font-size: 15px;
+  color: var(--quiet);
+}
 
 /* ============================================================
    About

@@ -34,7 +34,7 @@ export default function Home() {
                   Erik <span>Olvera</span>
                 </h1>
                 <p className="player-pos">
-                  Backend · Python · Financial systems
+                  Full-stack · Python &amp; TypeScript · Product-minded
                 </p>
               </div>
             </div>
@@ -45,7 +45,7 @@ export default function Home() {
               </div>
               <div>
                 <dt>Position</dt>
-                <dd>Software engineer, backend</dd>
+                <dd>Software engineer, full-stack</dd>
               </div>
               <div>
                 <dt>Season</dt>
@@ -56,12 +56,13 @@ export default function Home() {
               </div>
               <div>
                 <dt>Speciality</dt>
-                <dd>Python APIs · simulation engines · applied AI</dd>
+                <dd>Careful backends · user-first interfaces · applied AI</dd>
               </div>
             </dl>
             <p className="sheet-intro">
-              I build Python APIs, financial simulation engines, and AI
-              applications—with a close eye on the logic that makes them work.
+              I build complete products: Python APIs and engines underneath,
+              TypeScript interfaces on top, and every decision checked from the
+              user’s side of the screen.
             </p>
             <div className="sheet-actions">
               <a href="#work" className="button">
@@ -105,10 +106,10 @@ export default function Home() {
         </section>
 
         <div className="shell ticker">
-          <span className="ticker-lead">Python first</span>
-          <span>Backend systems</span>
-          <span>Financial software</span>
-          <span>Applied AI &amp; data</span>
+          <span className="ticker-lead">User first</span>
+          <span>Python backends</span>
+          <span>TypeScript interfaces</span>
+          <span>Fintech &amp; applied AI</span>
         </div>
 
         <section id="work" className="shell work-section">
@@ -118,7 +119,7 @@ export default function Home() {
               <h2>The engineering behind it</h2>
             </div>
             <p className="section-aside">
-              Practical problems. Deliberate technical decisions.
+              Real users. Deliberate decisions on both sides of the API.
             </p>
           </div>
           <div className="fixture-list">
@@ -129,10 +130,56 @@ export default function Home() {
 
           <div className="support-head">
             <span className="label label-strike">Also in the file</span>
-            <h3>From data to decisions</h3>
-            <p>Two more projects that show how I think.</p>
+            <h3>For real people, from real data</h3>
+            <p>Three more projects that show how I think.</p>
           </div>
           <div className="support-grid">
+            <article className="support-card support-card-wide">
+              <span className="label">Client work · User experience</span>
+              <h3>JMS – The Garage Door Men</h3>
+              <p className="support-body">
+                A bilingual marketing site for a Houston garage door business.
+                The customer is usually standing in front of a broken door, on a
+                phone, so the site is built to get them to a call or a text
+                fast.
+              </p>
+              <ul className="support-list">
+                <li>
+                  A quote planner turns a few taps into a ready-to-send text
+                  message, using the right SMS link format for iOS or Android.
+                </li>
+                <li>
+                  Spanish-preferring browsers open in Spanish, the choice is
+                  remembered, and the drafted message follows the language.
+                </li>
+                <li>
+                  A keyboard-accessible gallery returns focus where you left it,
+                  and the service map loads only when it scrolls into view.
+                </li>
+              </ul>
+              <div className="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Vite</span>
+              </div>
+              <div className="fixture-actions">
+                <a
+                  className="link"
+                  href="https://erikolvera.github.io/jms-the-garage-door-men/"
+                >
+                  Visit the live site{" "}
+                  <ArrowUpRight size={13} aria-hidden="true" />
+                </a>
+                <a
+                  className="link"
+                  href="https://github.com/erikolvera/jms-the-garage-door-men"
+                  aria-label="View JMS – The Garage Door Men source on GitHub"
+                >
+                  Code <ArrowUpRight size={13} aria-hidden="true" />
+                </a>
+              </div>
+            </article>
             <article className="support-card">
               <span className="label">Machine learning foundations</span>
               <h3>Image classification</h3>
@@ -215,15 +262,17 @@ export default function Home() {
             <div className="about-copy">
               <p>
                 I’m a Computer Science graduate from Texas State University,
-                with a minor in Data Analytics. Python is my strongest language,
-                and I’m most interested in the point where a useful idea becomes
-                a working system.
+                with a minor in Data Analytics. I like building things end to
+                end, and I tend to see them from the user’s side first: if I
+                were using this, where would I expect to click, and what is the
+                most convenient way to find what I need?
               </p>
               <p>
-                That has taken me from debt simulations and typed APIs to AI
-                workflows and classification algorithms. I like understanding
-                what happens underneath: how data moves, where assumptions
-                break, and how to make the result easier to trust.
+                That habit shapes the backend too. Python is my strongest
+                language, and I care about what happens underneath: how data
+                moves, where assumptions break, and how to make a result easier
+                to trust. A precise debt engine is only useful if the screen in
+                front of it tells someone what to do next.
               </p>
               <p>
                 I also have experience using AI-assisted development tools,
@@ -232,9 +281,9 @@ export default function Home() {
                 to working software.
               </p>
               <p>
-                I’m looking for an early-career software or backend engineering
-                role, especially on a team working with financial software,
-                data, or practical AI applications.
+                I’m looking for an early-career full-stack or software
+                engineering role, especially on a product team working with
+                financial software, data, or practical AI applications.
               </p>
               <p>
                 Outside of engineering, I’m a soccer fan, with my favorite team
@@ -278,7 +327,7 @@ export default function Home() {
               </span>
               <h2>Let’s build something useful</h2>
               <p className="contact-note">
-                Software engineering · Backend · Python
+                Full-stack · Python &amp; TypeScript · Product-minded
               </p>
             </div>
             <div>
