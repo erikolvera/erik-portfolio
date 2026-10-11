@@ -18,4 +18,18 @@ jobs:
       - run: npm run check
       - run: npm run build
       - run: npm test
-      - run: npm audit --audit-level=high
+      # Fail on high/critical advisories, except braces GHSA-vfj7-8cjw-p6xm:
+      # no patched release exists and it is only reachable via build-time
+      # globs in vinext/shadcn. Remove once braces ships a fix.
+      - run: |
+          npm audit --json > audit.json || true
+          node -e '
+            const allow = ["GHSA-vfj7-8cjw-p6xm"];
+            const { vulnerabilities = {} } = JSON.parse(require("fs").readFileSync("audit.json"));
+            const bad = Object.values(vulnerabilities)
+              .flatMap((v) => v.via.filter((a) => typeof a === "object"))
+              .filter((a) => ["high", "critical"].includes(a.severity))
+              .filter((a) => !allow.some((id) => a.url.endsWith(id)));
+            for (const a of bad) console.error(`${a.severity}: ${a.name} ${a.url}`);
+            process.exit(bad.length ? 1 : 0);
+          '
