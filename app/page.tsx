@@ -157,6 +157,40 @@ export default function Home() {
                   and the service map loads only when it scrolls into view.
                 </li>
               </ul>
+              <div className="gallery-grid">
+                {[
+                  {
+                    lang: "EN",
+                    src: "/projects/jms/english.webp",
+                    alt: "JMS homepage hero in English: “No Job Too Far. No Repair Too Complex.” with Get Custom Quote and Call Us buttons beside a photo of an installed glass garage door.",
+                    caption: "The English homepage leads with a quote and a call.",
+                  },
+                  {
+                    lang: "ES",
+                    src: "/projects/jms/spanish.webp",
+                    alt: "The same JMS hero in Spanish: “Ningún Trabajo Muy Lejos. Ninguna Reparación Muy Compleja.” with Obtener Cotización and ¡Llámenos! buttons.",
+                    caption: "The full site, navigation included, switches to Spanish.",
+                  },
+                ].map((shot) => (
+                  <figure key={shot.src}>
+                    <div className="gallery-frame">
+                      {/* oxlint-disable-next-line next/no-img-element -- These are pre-optimized static WebP assets. */}
+                      <img
+                        src={shot.src}
+                        alt={shot.alt}
+                        width={1800}
+                        height={1008}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <figcaption>
+                      <span>{shot.lang}</span>
+                      {shot.caption}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
               <div className="tags">
                 <span>HTML</span>
                 <span>CSS</span>
